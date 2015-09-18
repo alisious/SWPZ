@@ -1,0 +1,2 @@
+1. Ka¿da zarejestrowana osoba musi mieæ nazwisko i imiê oraz PESEL lub datê urodzenia i imie ojca.
+2. Jako operator chcê mieæ mo¿liwoœæ wyszukania osoby podaj¹c nazwisko, imiê, PESEL lub datê urodzenia i imiê ojca aby sprawdziæ, czy osoba jest zarejestrowana.

@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWPZ.EO.Tests", "SWPZ.EO.Tests\SWPZ.EO.Tests.csproj", "{A6A980AC-E1B4-4888-9BEA-62B6B6A19E9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumenty", "Dokumenty", "{E3E997AF-BCFA-446A-BB29-B778E31C561B}"
+	ProjectSection(SolutionItems) = preProject
+		EO-ProductBacklog.txt = EO-ProductBacklog.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
