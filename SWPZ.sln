@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWPZ.EO", "SWPZ.EO\SWPZ.EO.csproj", "{CA8D8C59-F978-46FC-91F4-594D01E20D82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWPZ.EO.Tests", "SWPZ.EO.Tests\SWPZ.EO.Tests.csproj", "{A6A980AC-E1B4-4888-9BEA-62B6B6A19E9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumenty", "Dokumenty", "{E3E997AF-BCFA-446A-BB29-B778E31C561B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA8D8C59-F978-46FC-91F4-594D01E20D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8D8C59-F978-46FC-91F4-594D01E20D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8D8C59-F978-46FC-91F4-594D01E20D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8D8C59-F978-46FC-91F4-594D01E20D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A980AC-E1B4-4888-9BEA-62B6B6A19E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A980AC-E1B4-4888-9BEA-62B6B6A19E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A980AC-E1B4-4888-9BEA-62B6B6A19E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A980AC-E1B4-4888-9BEA-62B6B6A19E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
