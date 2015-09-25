@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SWPZ.EO.Domain.Person">
+    <Position X="5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAJCAFQAgAAABQAAAABAAAAAIAEAEAAAAAAAAACAAAk=</HashCode>
+      <FileName>Domain\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Addresses" />
+      <Property Name="Citizenships" />
+      <Property Name="Workplaces" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SWPZ.EO.Domain.Address" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAAAAIAAAAAABA=</HashCode>
+      <FileName>Domain\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWPZ.EO.Domain.Citizenship" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Citizenship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWPZ.EO.Domain.Workplace" Collapsed="true">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAQAAAAAAAAAAIIAAAAAAAAAQAAAAAAAIAAAAAABA=</HashCode>
+      <FileName>Domain\Workplace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

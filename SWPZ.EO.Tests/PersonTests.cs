@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SWPZ.EO.Domain;
 
@@ -77,5 +78,30 @@ namespace SWPZ.EO.Tests
 
         }
 
+
+        [TestMethod]
+        public void osoba_może_posiadać_więcej_niż_1_obywatelstwa()
+        {
+            var p = PersonFactory.CreatePerson("73020916558", "JACEK", "KORPUSIK", "NOWA 10", "WARSZAWA", "01-163");
+            var c1 = new Citizenship();
+            var c2 = new Citizenship();
+            p.AddCitizenship(c1);
+            p.AddCitizenship(c2);
+            Assert.IsNotNull(p);
+            Assert.AreEqual(2, p.Citizenships.Count);
+            
+        }
+
+        [TestMethod]
+        public void nie_można_dodać_obywatelstwa_które_osoba_już_posiada()
+        {
+            var p = PersonFactory.CreatePerson("73020916558", "JACEK", "KORPUSIK", "NOWA 10", "WARSZAWA", "01-163");
+            var c1 = new Citizenship();
+            p.AddCitizenship(c1);
+            p.AddCitizenship(c1);
+            Assert.IsNotNull(p);
+            Assert.AreEqual(1, p.Citizenships.Count);
+
+        }
     }
 }
