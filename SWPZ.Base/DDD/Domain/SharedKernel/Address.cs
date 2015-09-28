@@ -1,48 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using SWPZ.Base.DDD.Domain;
 
-namespace SWPZ.EO.Domain
+namespace SWPZ.Base.DDD.Domain.SharedKernel
 {
     #pragma warning disable 661,660 //Equals and GetHashCode are overridden in ValueObject class.
-    public class Workplace : ValueObject
+    public class Address : ValueObject
     #pragma warning restore 661,660
-
     {
-        internal Workplace()
-        {
-
-        }
-
-        public string CompanyName { get; set; }
-        public string JobTittle { get; set; }
         public string Street { get; set; }
         public string StreetNo { get; set; }
-        public string PlaceeNo { get; set; }
+        public string PlaceNo { get; set; }
         public string City { get; set; }
         public string PostalCode { get; set; }
 
 
+        internal Address()
+        {
+
+        }
+
+        public Address(string city)
+        {
+            City = city;
+        }
+
         #region Infrastructure
+        
 
         protected override IEnumerable<object> GetAtomicValues()
         {
-            yield return CompanyName;
-            yield return JobTittle;
+            yield return City;
+            yield return Street;
+            yield return StreetNo;
+            yield return PlaceNo;
+            yield return PostalCode;
+
         }
 
-        public static bool operator ==(Workplace left, Workplace right)
+        public static bool operator ==(Address left, Address right)
         {
             return EqualOperator(left, right);
         }
 
-        public static bool operator !=(Workplace left, Workplace right)
+        public static bool operator !=(Address left, Address right)
         {
             return NotEqualOperator(left, right);
         }
 
         #endregion
+
     }
 }

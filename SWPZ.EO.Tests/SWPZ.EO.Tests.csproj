@@ -52,8 +52,13 @@
   <ItemGroup>
     <Compile Include="PersonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SWPZ.Base\SWPZ.Base.csproj">
+      <Project>{725c5cb9-8420-4427-961d-4cb04fcccc3b}</Project>
+      <Name>SWPZ.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SWPZ.EO\SWPZ.EO.csproj">
       <Project>{ca8d8c59-f978-46fc-91f4-594d01e20d82}</Project>
       <Name>SWPZ.EO</Name>

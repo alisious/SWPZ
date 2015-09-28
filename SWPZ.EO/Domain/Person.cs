@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SWPZ.Base.DDD.Domain;
+using SWPZ.Base.DDD.Domain.SharedKernel;
 
 namespace SWPZ.EO.Domain
 {
@@ -15,19 +13,20 @@ namespace SWPZ.EO.Domain
     };
 
     
-    public class Person
+    public class Person :AggregateRoot
     {
 
         private readonly IList<Address> _addresses;
         private readonly IList<Workplace> _workplaces;
-        private readonly IList<Citizenship> _citizenships; 
+        private readonly IList<Country> _citizenships; 
 
 
-        public Guid Id { get; protected set; }
         public string PESEL { get; protected set; }
         public string FirstName { get; protected set; }
         public string LastName { get; protected set; }
         public Sex Sex { get; set; }
+        public Country Nationality { get; set; }
+
 
         public IReadOnlyList<Address> Addresses
         {
@@ -39,16 +38,16 @@ namespace SWPZ.EO.Domain
             get { return new ReadOnlyCollection<Workplace>(_workplaces); }
         }
 
-        public IReadOnlyList<Citizenship> Citizenships
+        public IReadOnlyList<Country> Citizenships
         {
-            get { return new ReadOnlyCollection<Citizenship>(_citizenships); }
+            get { return new ReadOnlyCollection<Country>(_citizenships); }
         }
 
         private Person()
         {
             _addresses = new List<Address>();
             _workplaces = new List<Workplace>();
-            _citizenships = new List<Citizenship>();
+            _citizenships = new List<Country>();
         }
 
         internal Person(string pesel, string firstName, string lastName,string city,string street,string postalCode) 
@@ -62,7 +61,7 @@ namespace SWPZ.EO.Domain
 
         public void AddAddress(string city,string street,string postalCode)
         {
-            var address = new Address() {City = city, Street = street, PostalCode = postalCode};
+            var address = new Address(city){ Street = street, PostalCode = postalCode};
             _addresses.Add(address);
         }
 
@@ -83,10 +82,10 @@ namespace SWPZ.EO.Domain
             _workplaces.Remove(workplace);
         }
 
-        public void AddCitizenship(Citizenship citizenship)
+        public void AddCitizenship(Country country)
         {
-           if(!_citizenships.Contains(citizenship))
-            _citizenships.Add(citizenship);
+           if(!_citizenships.Contains(country))
+            _citizenships.Add(country);
         }
     } 
     

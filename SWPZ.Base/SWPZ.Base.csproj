@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA8D8C59-F978-46FC-91F4-594D01E20D82}</ProjectGuid>
+    <ProjectGuid>{725C5CB9-8420-4427-961D-4CB04FCCCC3B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SWPZ.EO</RootNamespace>
-    <AssemblyName>SWPZ.EO</AssemblyName>
+    <RootNamespace>SWPZ.Base</RootNamespace>
+    <AssemblyName>SWPZ.Base</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,25 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Country.cs" />
-    <Compile Include="Domain\Person.cs" />
-    <Compile Include="Domain\PersonFactory.cs" />
-    <Compile Include="Domain\PersonRegistration.cs" />
-    <Compile Include="Domain\Reservation.cs" />
-    <Compile Include="Domain\ReservationFactory.cs" />
-    <Compile Include="Domain\ReservationStatus.cs" />
-    <Compile Include="Domain\Workplace.cs" />
+    <Compile Include="DDD\Domain\AggregateRoot.cs" />
+    <Compile Include="DDD\Domain\Annotations\DomainAggregateRootAttribute.cs" />
+    <Compile Include="DDD\Domain\Annotations\DomainEntityAttribute.cs" />
+    <Compile Include="DDD\Domain\Annotations\DomainFactoryAttribute.cs" />
+    <Compile Include="DDD\Domain\Annotations\DomainValueObjectAttribute.cs" />
+    <Compile Include="DDD\Domain\Entity.cs" />
+    <Compile Include="DDD\Domain\EntityStatus.cs" />
+    <Compile Include="DDD\Domain\ValueObject.cs" />
+    <Compile Include="DDD\Domain\SharedKernel\Address.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Domain\PersonAggregateClassDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SWPZ.Base\SWPZ.Base.csproj">
-      <Project>{725c5cb9-8420-4427-961d-4cb04fcccc3b}</Project>
-      <Name>SWPZ.Base</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

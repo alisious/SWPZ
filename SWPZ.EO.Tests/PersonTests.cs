@@ -83,8 +83,8 @@ namespace SWPZ.EO.Tests
         public void osoba_może_posiadać_więcej_niż_1_obywatelstwa()
         {
             var p = PersonFactory.CreatePerson("73020916558", "JACEK", "KORPUSIK", "NOWA 10", "WARSZAWA", "01-163");
-            var c1 = new Citizenship();
-            var c2 = new Citizenship();
+            var c1 = new Country("PL","POLSKA");
+            var c2 = new Country("US","USA");
             p.AddCitizenship(c1);
             p.AddCitizenship(c2);
             Assert.IsNotNull(p);
@@ -96,12 +96,14 @@ namespace SWPZ.EO.Tests
         public void nie_można_dodać_obywatelstwa_które_osoba_już_posiada()
         {
             var p = PersonFactory.CreatePerson("73020916558", "JACEK", "KORPUSIK", "NOWA 10", "WARSZAWA", "01-163");
-            var c1 = new Citizenship();
+            var c1 = new Country("PL","POLSKA");
             p.AddCitizenship(c1);
             p.AddCitizenship(c1);
             Assert.IsNotNull(p);
             Assert.AreEqual(1, p.Citizenships.Count);
 
         }
+
+       
     }
 }
