@@ -3,34 +3,30 @@
   <Class Name="SWPZ.EO.Domain.Person">
     <Position X="5" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAJCAFQAgAAABQAAAABAAAAAIAEAEAAAAAAAAACAAAk=</HashCode>
+      <HashCode>AAJAAFQAgAAABQAAAABAAAAAIAEAEAAAAAAAAACACAk=</HashCode>
       <FileName>Domain\Person.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Addresses" />
-      <Property Name="Citizenships" />
       <Property Name="Workplaces" />
+      <Property Name="Addresses" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="SWPZ.EO.Domain.Address" Collapsed="true">
-    <Position X="9" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAAAAIAAAAAABA=</HashCode>
-      <FileName>Domain\Address.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SWPZ.EO.Domain.Citizenship" Collapsed="true">
-    <Position X="9" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\Citizenship.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SWPZ.EO.Domain.Workplace" Collapsed="true">
-    <Position X="9" Y="2.25" Width="1.5" />
+    <Position X="9" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAQAAAAAAAAAAIIAAAAAAAAAQAAAAAAAIAAAAAABA=</HashCode>
+      <HashCode>gAAAQAAAAAAAAAAIIAAAAAAAAAQAAAAAAAIAAAAAQjA=</HashCode>
       <FileName>Domain\Workplace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWPZ.Base.DDD.Domain.SharedKernel.Address" Collapsed="true">
+    <Position X="9" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SWPZ.EO.Domain.PersonFactory">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Domain\PersonFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

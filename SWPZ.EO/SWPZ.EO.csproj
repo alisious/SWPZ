@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Domain\PersonAggregateClassDiagram.cd" />
+    <None Include="Domain\ReservationAggregateClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWPZ.Base\SWPZ.Base.csproj">
