@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Country.cs" />
+    <Compile Include="Domain\IPersonRepository.cs" />
     <Compile Include="Domain\Person.cs" />
     <Compile Include="Domain\PersonFactory.cs" />
     <Compile Include="Domain\PersonRegistration.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Domain\ReservationFactory.cs" />
     <Compile Include="Domain\ReservationStatus.cs" />
     <Compile Include="Domain\Workplace.cs" />
+    <Compile Include="Infrastructure\Repositories\PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +61,7 @@
       <Name>SWPZ.Base</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
